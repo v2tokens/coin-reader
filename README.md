@@ -1,6 +1,6 @@
 # coin-reader
 
-Reading coins and spitting out HTTP.
+Read coins and spits out HTTP requests.
 
 ## setup
 
