@@ -8,12 +8,21 @@ NUM_PIN = 37
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(NUM_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
+TICKER_URL = "http://ticker.home:5000"
+SCREEN1_URL = "http://screen1.home:5000"
+
+counter = 0
+COUNTER_GOAL = 30
+
 while 1:
     if GPIO.input(NUM_PIN) == 0:
-        # TODO(decentral1se): use dns local hostnames and also
-        #                     have these pluggable in case they change
-        get("http://10.0.1.180:5000")  # currently the led
-        get("http://10.0.1.100:5000")  # currently the gui
+        get(SCREEN1_URL)
+
+        counter += 1
+        if counter == COUNTER_GOAL:
+            get(TICKER_URL)
+            counter = 0
+
     time.sleep(0.1)
 
 GPIO.cleanup()
