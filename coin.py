@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(NUM_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 TICKER_URL = "http://ticker:5000"
-SCREEN1_URL = "http://screen1:5000"
+SCREEN1_URL = "http://MBP-van-Lotte:5000"
 SCREEN2_URL = "http://screen2:5000"
 
 counter = 0
