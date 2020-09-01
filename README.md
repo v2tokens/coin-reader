@@ -13,5 +13,5 @@ $ make install
 ## run it
 
 ```bash
-$ make server
+$ make
 ```
