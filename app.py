@@ -31,7 +31,7 @@ def go_test():
     for host in [TICKER_HOST, SCREEN1_HOST, SCREEN2_HOST]:
         success = fire_request(f"http://{host}/ok:{DEFAULT_PORT}")
         if not success:
-            print(f"Unable to contact {host}, bailing out...")
+            print(f"Unable to contact the '{host}' host, bailing out...")
             exit(1)
 
 
