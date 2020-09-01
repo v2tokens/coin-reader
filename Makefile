@@ -1,10 +1,10 @@
 default: run
 
-install: build
+install:
 	@python3 -m venv .venv && \
 	.venv/bin/pip install -r requirements.txt
 
 run:
 	@.venv/bin/python3 app.py
 
-.PHONY: install serve
+.PHONY: install run
