@@ -41,7 +41,7 @@ go_test()
 try:
     print("Running GPIO read loop...")
     while 1:
-        if GPIO.input(NUM_PIN) == 0:
+        if GPIO.input(NUM_PIN) == 1:
             print("Coin detected...")
 
             fire_request(f"http://{SCREEN1_HOST}:{DEFAULT_PORT}")
