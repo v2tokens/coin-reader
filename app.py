@@ -15,7 +15,7 @@ SCREEN1_HOST = "mbp-van-lotte"
 SCREEN2_HOST = "scova"
 
 counter = 0
-COUNTER_GOAL = 30
+COUNTER_GOAL = 25
 
 
 def fire_request(url):
