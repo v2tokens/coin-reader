@@ -19,6 +19,7 @@ try:
     while 1:
         if GPIO.input(NUM_PIN) == 0:
             get(SCREEN1_URL)
+            get(SCREEN2_URL)
             counter += 1
             if counter == COUNTER_GOAL:
                 get(TICKER_URL)
