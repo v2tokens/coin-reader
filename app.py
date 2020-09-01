@@ -29,7 +29,7 @@ def fire_request(url):
 
 def go_test():
     for host in [TICKER_HOST, SCREEN1_HOST, SCREEN2_HOST]:
-        success = fire_request(f"http://{TICKER_HOST}/ok:{DEFAULT_PORT}")
+        success = fire_request(f"http://{host}/ok:{DEFAULT_PORT}")
         if not success:
             print(f"Unable to contact {host}, bailing out...")
             exit(1)
