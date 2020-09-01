@@ -49,6 +49,7 @@ try:
 
             counter += 1
             if counter == COUNTER_GOAL:
+                print("Counter goal reached...")
                 fire_request(f"http://{TICKER_HOST}:{DEFAULT_PORT}")
                 counter = 0
 
