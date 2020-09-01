@@ -12,7 +12,7 @@ GPIO.setup(NUM_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 DEFAULT_PORT = 5000
 TICKER_HOST = "ticker"
 SCREEN1_HOST = "mbp-van-lotte"
-SCREEN2_HOST = "scova.local"
+SCREEN2_HOST = "scova"
 
 counter = 0
 COUNTER_GOAL = 30
