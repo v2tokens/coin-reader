@@ -1,4 +1,7 @@
 import time
+from pathlib import Path
+from shlex import split
+from subprocess import run
 from sys import exit
 
 from requests import get
@@ -16,6 +19,13 @@ SCREEN2_HOST = "scova"
 
 counter = 0
 COUNTER_GOAL = 25
+
+TIP_TINY = Path("assets/sounds/tip_tiny.mp3").absolute()
+TIP_GOAL = Path("assets/sounds/tip_medium.mp3").absolute()
+
+
+def play_sound(fpath):
+    run(split(f"play {fpath}"))
 
 
 def fire_request(url):
@@ -44,12 +54,14 @@ try:
         if GPIO.input(NUM_PIN) == 1:
             print("Coin detected...")
 
+            play_sound(TIP_TINY)
             fire_request(f"http://{SCREEN1_HOST}:{DEFAULT_PORT}")
             fire_request(f"http://{SCREEN2_HOST}:{DEFAULT_PORT}")
 
             counter += 1
             if counter == COUNTER_GOAL:
                 print("Counter goal reached...")
+                play_sound(TIP_GOAL)
                 fire_request(f"http://{TICKER_HOST}:{DEFAULT_PORT}")
                 counter = 0
 
