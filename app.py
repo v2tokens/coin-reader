@@ -68,7 +68,7 @@ try:
                 fire_request(f"http://{TICKER_HOST}:{DEFAULT_PORT}")
                 counter = 0
 
-                print("Going to sleep for {SLEEP_FOR_SCREEN_ANIM}...")
+                print(f"Going to sleep for {SLEEP_FOR_SCREEN_ANIM} seconds...")
                 time.sleep(SLEEP_FOR_SCREEN_ANIM)
                 print("Waking up again...")
 
