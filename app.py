@@ -27,7 +27,6 @@ TIP_GOAL = Path("assets/sounds/tip_medium.mp3").absolute()
 
 
 def play_sound(fpath):
-    time.sleep(0.3)
     run(split(f"play {fpath}"))
 
 
