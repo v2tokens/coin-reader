@@ -18,7 +18,7 @@ SCREEN1_HOST = "mbp-van-lotte"
 SCREEN2_HOST = "scova"
 
 counter = 0
-COUNTER_GOAL = 25
+COUNTER_GOAL = 30
 
 TIP_TINY = Path("assets/sounds/tip_tiny.mp3").absolute()
 TIP_GOAL = Path("assets/sounds/tip_medium.mp3").absolute()
