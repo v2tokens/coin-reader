@@ -20,7 +20,7 @@ SCREEN2_HOST = "ilinx"
 counter = 0
 COUNTER_GOAL = 5
 
-SLEEP_FOR_SCREEN_ANIM = 10
+SLEEP_FOR_SCREEN_ANIM = 30
 
 TIP_TINY = Path("assets/sounds/tip_tiny.mp3").absolute()
 TIP_GOAL = Path("assets/sounds/tip_medium.mp3").absolute()
