@@ -20,6 +20,8 @@ SCREEN2_HOST = "scova"
 counter = 0
 COUNTER_GOAL = 30
 
+SLEEP_FOR_SCREEN_ANIM = 10
+
 TIP_TINY = Path("assets/sounds/tip_tiny.mp3").absolute()
 TIP_GOAL = Path("assets/sounds/tip_medium.mp3").absolute()
 
@@ -47,6 +49,7 @@ def go_test():
 
 print("Running start-up tests...")
 go_test()
+print("Success!")
 
 try:
     print("Running GPIO read loop...")
@@ -60,10 +63,14 @@ try:
 
             counter += 1
             if counter == COUNTER_GOAL:
-                print("Counter goal reached...")
+                print("Goal reached...")
                 play_sound(TIP_GOAL)
                 fire_request(f"http://{TICKER_HOST}:{DEFAULT_PORT}")
                 counter = 0
+
+                print("Going to sleep for {SLEEP_FOR_SCREEN_ANIM}...")
+                time.sleep(SLEEP_FOR_SCREEN_ANIM)
+                print("Waking up again...")
 
         time.sleep(0.1)
 except KeyboardInterrupt:
