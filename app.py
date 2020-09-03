@@ -18,7 +18,7 @@ SCREEN1_HOST = "mbp-van-lotte"
 SCREEN2_HOST = "ilinx"
 
 counter = 0
-COUNTER_GOAL = 30
+COUNTER_GOAL = 5
 
 SLEEP_FOR_SCREEN_ANIM = 10
 
@@ -27,6 +27,7 @@ TIP_GOAL = Path("assets/sounds/tip_medium.mp3").absolute()
 
 
 def play_sound(fpath):
+    time.sleep(2)
     run(split(f"play {fpath}"))
 
 
